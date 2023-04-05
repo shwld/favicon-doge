@@ -1,0 +1,19 @@
+{
+  "name": "favicon Optimizer by following Twitter",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Optimize favicon by following twitter's example",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
