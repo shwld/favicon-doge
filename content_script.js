@@ -1,10 +1,24 @@
 window.onload = async function () {
-  var link =
-    document.querySelector('link[rel="shortcut icon"]') ||
-    document.querySelector('link[rel="icon"]');
-  if (link) {
-    link.setAttribute('href', chrome.runtime.getURL('images/favicon.ico'));
+  var links = [
+    document.querySelector('link[rel="shortcut icon"]'),
+    document.querySelector('link[rel="icon"]'),
+  ].filter((it) => it);
+  if (!links.length) {
+    var link = document.createElement('link');
+    document.head.appendChild(link);
+    links.push(link);
   }
+  links.forEach((link) => {
+    link.setAttribute('rel', 'shortcut icon');
+    link.setAttribute('href', chrome.runtime.getURL('images/favicon.ico'));
+    link.removeAttribute('type');
+    link.addEventListener('change', function () {
+      link.setAttribute('rel', 'shortcut icon');
+      link.setAttribute('href', chrome.runtime.getURL('images/favicon.ico'));
+      link.removeAttribute('type');
+    });
+  });
+
   var title = document.querySelector('title');
   if (title) {
     title.innerHTML = 'Home / Twitter';
