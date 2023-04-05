@@ -2,6 +2,11 @@
   "name": "favicon Optimizer by following Twitter",
   "version": "1.0",
   "manifest_version": 3,
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
   "description": "Optimize favicon by following twitter's example",
   "content_scripts": [
     {
