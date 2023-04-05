@@ -12,7 +12,7 @@
 1. chrome://extensions/ を開く
 2. デベロッパーモードを有効にする
 3. パッケージされていない拡張機能を読み込む
-4. このページの Source code(zip)を解凍したフォルダを指定する
+4. [Releasesページ](https://github.com/shwld/favicon-doge/releases)の Source code(zip)を解凍したフォルダを指定する
 
 このプロダクトは、株式会社mofmofの「水曜日の個人開発」にサポートされています。
 https://indie-dev.mof-mof.co.jp
